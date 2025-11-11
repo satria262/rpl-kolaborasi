@@ -1,4 +1,4 @@
-<div class=" flex flex-col items-center justify-center w-full bg-[#04335D] text-white text-xl font-semibold p-5">
+<div class=" flex flex-col items-center justify-center w-full bg-[#233647] text-white text-xl font-semibold p-5">
     <div class="flex space-x-4 h-30">
         <ul class="flex items-center space-x-4">
             <li><img src="./images/samsung.png" alt=""></li>

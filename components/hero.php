@@ -1,8 +1,8 @@
 <div class="flex justify-center items-center">
     <div class="flex w-9/10 justify-between items-center">
-        <div class="space-y-2">
-            <p class="font-semibold text-8xl">Build Better <br> Products</p>
-            <p class=" text-2xl">Introducing a new way for your brand to reach the creative <br> comunity</p>
+        <div class="text-white space-y-2">
+            <p class="font-semibold text-8xl"><?php echo $baris['title']; ?></p>
+            <p class="text-[#7D98B5] text-2xl"><?php echo $baris['subtitle'] ?></p>
             <div class="flex space-x-2">
                 <button class="flex items-center bg-[#1A5CEB] p-2 rounded-lg text-white space-x-2">
                     <p>Get Started</p>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div>
-            <img src="https://i.pinimg.com/736x/34/72/39/347239de5c0d0181782de7af48f87072.jpg" alt="" class="w-120 h-120 object-cover">
+            <img src="./images/laptop_hero.png" alt="" class="w-120 h-120 object-cover">
         </div>
     </div>
 </div>

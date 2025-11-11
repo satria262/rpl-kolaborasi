@@ -7,11 +7,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#FFFFF]">
-    <?php include "components/navbar.html" ?>
-    <?php include "components/hero.html" ?>
-    <?php include "components/sponsor.html" ?>
-    <?php include "components/service.html" ?>
-    <?php include "components/contact.html" ?>
+<body class="bg-[#111A23]">
+<?php include "config/db.php"; ?>
+<?php foreach($query as $baris) { ?>  
+    <?php include "components/navbar.php" ?>
+    <?php include "components/hero.php" ?>
+    <?php include "components/sponsor.php" ?>
+    <?php include "components/service.php" ?>
+    <?php include "components/contact.php" ?>
+    <?php include "testimonial.php" ?>
+    <?php include "components/review.php" ?>
+    <?php include "components/footer.php" ?>
+<?php } ?>
 </body>
 </html>

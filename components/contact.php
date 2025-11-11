@@ -1,4 +1,4 @@
-<div class="flex bg-[#04335D] flex justify-center items-center">
+<div class="flex bg-[#233647] flex justify-center items-center">
     <div class="flex justify-between items-center w-8/10">
         <div>
             <img src="./images/cs.png" alt="" class="h-100 w-auto">
@@ -14,7 +14,9 @@
                     <p>+62 821 3392 8185</p>
                 </div>
                 <p>or</p>
+                <a href="https://wa.me/qr/7H5OSESBMJI6H1">
                 <button class="bg-[#1A5CEB] p-4 text-white rounded-lg text-sm">Get a Contact</button>
+                </a>
             </div>
         </div>
     </div>
