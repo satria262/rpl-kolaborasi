@@ -21,16 +21,10 @@ if (isLoggedIn()) {
             $stmt->execute();
             $result = $stmt->get_result();
 
-            
-            // $user = $result->fetch_assoc();
-
-            // $emailUs = $user['email'];
-            // $stored_hash = $user['password'];
-
             if ($result->num_rows > 0) {
 
                 $admin = $result->fetch_assoc();
-                if ($password == $admin['password']) {
+                if (password_verify(  $password,$admin['password'])) {
                     $_SESSION['id'] = $password;
                     header("Location: dashboard/dashboard.php");
                     exit();
@@ -56,12 +50,13 @@ if (isLoggedIn()) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Seller Panel</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50">
-    <div class="min-h-screen flex items-center justify-center py-12 px-4">
-        <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
-            <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Login Seller</h1>
+<body class="bg-[#111A23]">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="w-full max-w-md bg-[#233647] rounded-lg shadow-md p-8">
+            <h1 class="text-3xl font-bold text-center text-[#88ABCA] mb-8">Login Admin</h1>
 
             <?php if ($error): ?>
                 <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
@@ -71,19 +66,17 @@ if (isLoggedIn()) {
 
             <form method="POST" class="space-y-4">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <label class="block text-sm font-medium text-white mb-1">Email</label>
                     <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <label class="block text-sm font-medium text-white mb-1">Password</label>
                     <input type="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 </div>
 
                 <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Login</button>
             </form>
-
-            <p class="text-center text-gray-600 mt-6">Belum punya akun? <a href="register.php" class="text-blue-600 hover:underline">Daftar di sini</a></p>
         </div>
     </div>
 </body>

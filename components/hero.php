@@ -1,16 +1,10 @@
-<div class="flex justify-center items-center">
+<div class="flex justify-center items-center my-18">
     <div class="flex w-9/10 justify-between items-center">
         <div class="text-white space-y-2">
             <p class="font-semibold text-8xl"><?php echo $baris['title']; ?></p>
             <p class="text-[#7D98B5] text-2xl"><?php echo $baris['subtitle'] ?></p>
             <div class="flex space-x-2">
-                <button class="flex items-center bg-[#1A5CEB] p-2 rounded-lg text-white space-x-2">
-                    <p>Get Started</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-                </button>
-                <button class="bg-transparent p-2 rounded-lg border-[#1A5CEB] border-1 text-[#1A5CEB]">Speak to workshop</button>
+                <a href="buyer.php"><button class="bg-transparent p-2 rounded-lg border-[#1A5CEB] border-1 text-[#1A5CEB]">Check your order</button></a>
             </div>
         </div>
         <div>

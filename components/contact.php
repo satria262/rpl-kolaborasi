@@ -1,11 +1,11 @@
 <div class="flex bg-[#233647] flex justify-center items-center">
-    <div class="flex justify-between items-center w-8/10">
+    <div class="flex justify-between items-center ">
         <div>
             <img src="./images/cs.png" alt="" class="h-100 w-auto">
         </div>
         <div class="text-white space-y-2 w-5/10 space-y-2">
-            <p class="text-4xl font-semibold">Lorem ipsum dolor sit amet <br> consectetur adipisicing.</p>
-            <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis ullam nam libero est, id a nihil veritatis. Beatae, a nisi.</p>
+            <p class="text-4xl font-semibold">Having a problem?<br>We'll fix it today!</p>
+            <p >Need help? Contact us anytime. We're ready to answer your questions and provide the support you need.</p>
             <div class="flex justify-between items-center text-2xl">
                 <div class="flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

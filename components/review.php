@@ -7,6 +7,6 @@
         <a href="feedback.php">
             <button class="bg-[#1A5CEB] text-white p-2 w-20 rounded-xl">Add</button>
         </a>
-        <p class="text-white text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, harum sint iste vero explicabo molestiae.</p>
+        <p class="text-white text-xl">We are proud to be part of the journey of the customer who entrust their needs to us. Above are real-life experiences from those who have experiences our service.</p>
     </div>
 </div>

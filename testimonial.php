@@ -1,6 +1,6 @@
 <?php  
 
-$stmt = $conn->prepare('SELECT * FROM feedback ORDER BY id DESC LIMIT 6');
+$stmt = $conn->prepare('SELECT * FROM feedback ORDER BY id DESC LIMIT 10');
 $stmt->execute();
 $result = $stmt->get_result();
 ?>

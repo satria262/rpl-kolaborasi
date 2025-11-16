@@ -9,7 +9,7 @@ function isLoggedIn() {
 // redirect if seller is not logged in
 function requireLogin() {
     if(!isLoggedIn()) {
-        header("location: login.php");
+        header("location: /RPL-KOLABORASI/login.php");
         exit();
     }
 }
@@ -25,4 +25,6 @@ function logout() {
     header("location: login.php");
     exit();
 }
+
+
 ?>

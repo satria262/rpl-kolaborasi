@@ -10,8 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conn->prepare('INSERT INTO feedback (username, occupation, feedback, rating) VALUES (?, ?, ?, ?)');
     $stmt->bind_param('ssss', $name, $job, $message, $rating);
     if ($stmt->execute()) {
-        echo 'berhasil';
-        // header('location: index.php');
+        // echo 'berhasil';
+        header('Location: index.php');
         $name = $rating = $job = $message = '';
     } else {
         echo 'gagal';
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </svg>
                     <div>
                         <p class="text-[#88ABCA] text-lg font-semibold">Email</p>
-                        <p class="text-white font-semibold">kikuk@gmail.com</p>
+                        <p class="text-white font-semibold">rafifcomp@gmail.com</p>
                     </div>
                 </div>
                 <div class="flex items-center space-x-2">
