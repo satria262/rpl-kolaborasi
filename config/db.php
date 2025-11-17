@@ -10,7 +10,7 @@
         // echo 'ada';
     }
     $query = mysqli_query($conn,' SELECT * FROM landing');
-    // convert to array
+    // convert ke array
     while($row = (array) mysqli_fetch_array($query)) {
         // echo $row['title'];
     }

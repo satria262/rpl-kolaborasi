@@ -8,8 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
     $phone = $_POST['phone'];
 
-    $stmt = $conn->prepare("INSERT INTO request (name, pin, type, message, phone) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sissi", $name, $pin, $type, $message, $phone);
+    $stmt = $conn->prepare("INSERT INTO request (name, type, message, phone) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("sssi", $name, $type, $message, $phone);
     if ($stmt->execute()) {
         $success = '';
     }
@@ -28,7 +28,7 @@ $rslt = $statement->get_result();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Service</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>

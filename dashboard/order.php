@@ -20,14 +20,14 @@ if (isLoggedIn()) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Order</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/rpl-kolaborasi/style.css">
 </head>
 <body class="bg-[#111A23]">
     <div class="grid grid-cols-5">
         <?php include '../dashboard/sidebar.php' ?>
-        <div class="col-span-4 p-4 overflow-auto">
+        <div class="col-span-4 p-4 overflow-auto h-screen">
             <div class="border-1 border-white rounded-xl p-4 mt-10 text-white space-y-10">
                 <div>
                     <p class="text-4xl font-semibold">Orders</p>

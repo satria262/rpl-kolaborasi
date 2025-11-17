@@ -23,14 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Feedback</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#111A23]">
-    <?php include 'components/navbar.php' ?>
-    <div class="flex justify-center items-center pt-10 border-t-1 border-t-white">
-        <div class="grid grid-cols-2 grid-rows-5 gap-4 w-58/100">
+    <div class="grid grid-cols-5">
+    <div class="col-span-1">
+    <?php include 'dashboard/sidebar.php' ?>
+    </div>
+    <div class="flex justify-center items-center pt-10  col-span-4">
+        <div class="grid grid-cols-2 grid-rows-5 gap-6 w-8/10">
             <div class="row-span-3 rounded-xl bg-[#233647]">
                 <img src="./logos/client.png" alt="" class="rounded-xl w-auto h-full object-auto ">
             </div>
@@ -100,6 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>
