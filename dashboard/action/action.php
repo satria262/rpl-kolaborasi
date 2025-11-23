@@ -15,8 +15,8 @@ if (isLoggedIn()) {
         // }
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $status = $_POST['status'];
-            $detail = $_POST['detail'];
+            $status = $_POST['status'] ?? 'Your order is processed';
+            $detail = $_POST['detail'] ?? 'Your order is processed';
 
             $stmt = $conn->prepare('UPDATE request SET status = ?, DETAIL = ? WHERE id = ?');
             $stmt->bind_param("ssi", $status, $detail, $id);

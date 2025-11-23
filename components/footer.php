@@ -3,7 +3,7 @@
         <p class="text-white">Created by Alaeka Ahmad & Satria Aditama</p>
         <div class="w-9/10 flex justify-between absolute bg-transparent">
             <div></div>
-            <img src="./logos/saka.png" alt="" class="w-auto h-8">
+            <img src="./logos/saka.png" alt="" class="w-auto h-8 hidden md:block">
             <div></div>
         </div>
         <img src="./logos/rpl-sata.png" alt="" class="w-auto h-8">

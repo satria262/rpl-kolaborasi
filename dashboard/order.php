@@ -93,6 +93,7 @@ if (isLoggedIn()) {
                 <div class="w-full">
                     <table class="table-auto w-full">
                         <tr class=" h-10">
+                            <th class="text-start">Id</th>
                             <th class="text-start">Name</th>
                             <th class="text-start">Type</th>
                             <th class="text-start">Message</th>
@@ -102,6 +103,7 @@ if (isLoggedIn()) {
                         </tr>
                         <?php while ($row = $result->fetch_assoc()) { ?>
                         <tr class="h-8 border-b-1 border-b-gray-400 h-15">
+                            <td class=""><?php echo $row['id'] ?></td>
                             <td class=""><?php echo $row['name'] ?></td>
                             <td class=""><?php echo $row['type'] ?></td>
                             <td class=""><?php echo $row['message'] ?></td>

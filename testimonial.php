@@ -7,7 +7,7 @@ $result = $stmt->get_result();
 <div class="space-y-8 py-8">
     <div class="flex flex-col items-center space-y-4">
         <p class="text-3xl text-white font-semibold">Testimonial</p>
-        <p class="text-4xl text-white font-semibold">What our happy users says!</p>
+        <p class="text-4xl text-white font-semibold text-center">What our happy users says!</p>
     </div>
     <div class="flex justify-evenly gap-5 w-screen  overflow-auto px-10">
         <!-- first card -->

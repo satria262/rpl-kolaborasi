@@ -4,9 +4,14 @@ require_once '../config/session.php';
 $msg = '';
 
 if (isLoggedIn()) {
-    $statement = $conn->prepare('SELECT * FROM product ORDER BY id DESC');
-    $statement->execute();
-    $rslt = $statement->get_result();
+    // if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        // $search = $_GET['searchbar'] ?? '';
+        $statement = $conn->prepare("SELECT * FROM product ORDER BY id DESC");//untuk fungsi search tambahkan " WHERE name LIKE ?"
+        // $param = '%$search%';
+        // $statement->bind_param("s", $param);
+        $statement->execute();
+        $rslt = $statement->get_result();
+    // } 
 } else {
     requireLogin();
 }
@@ -25,9 +30,18 @@ if (isLoggedIn()) {
         <?php include '../dashboard/sidebar.php' ?>
         <div class="p-4 col-span-4 h-screen overflow-auto">
             <div class="p-4 mt-10 rounded-xl border-1 border-white space-y-10">
-                <div>
-                    <p class="text-4xl font-semibold text-white">Products</p>
-                    <p class="text-[#88ABCA] mb-4">View and manage your products</p>
+                <div class="flex justify-between items-center -mb-0">
+                    <div>
+                        <p class="text-4xl font-semibold text-white">Products</p>
+                        <p class="text-[#88ABCA] mb-4">View and manage your products</p>
+                    </div>
+                    <!-- comment dibawah untuk menambah searchbar -->
+                    <!-- <div class="flex items-center space-x-2 px-2 h-12 w-3/10 border-1 border-white rounded-xl text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                        <form method="GET"><input type="text" name="searchbar" placeholder="Search for products" class="outline-none    "></form>
+                    </div> -->
                 </div>
                 <div class="rounded-xl border-1 border-white p-4 space-y-6 text-white">
                     <p class="text-[#88ABCA]">Balance</p>
@@ -118,9 +132,9 @@ if (isLoggedIn()) {
                     </tr>
                     <?php while ($product = $rslt->fetch_assoc()) { ?>
                     <tr class="h-16 border-b-1 border-b-white text-white text-base ">
-                        <td><?php echo $product['name'] ?></td>
-                        <td><?php echo $product['description'] ?></td>
-                        <td><?php echo $product['type'] ?></td>
+                        <td><?php echo htmlspecialchars($product['name']) ?></td>
+                        <td><?php echo htmlspecialchars($product['description']) ?></td>
+                        <td><?php echo htmlspecialchars($product['type']) ?></td>
                         <td><?php echo "Rp ".number_format($product['price'], 0, ',', '.').',00'; ?></td>
                         <td><?php echo $product['stock'] ?></td>
                         <td><?php echo $product['create_at'] ?></td>
